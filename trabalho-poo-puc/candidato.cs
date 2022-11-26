@@ -8,11 +8,10 @@ namespace trabalho_poo_puc
 {
     public class Candidato
     {
-        public Candidato(int id, string nome, int qtdVotos, Partido partido)
+        public Candidato(int id, string nome, Partido partido)
         {
             Id = id;
             Nome = nome;
-            QtdVotos = qtdVotos;
             Partido = partido;
         }
 
