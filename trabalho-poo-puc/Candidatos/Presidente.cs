@@ -8,7 +8,7 @@ namespace trabalho_poo_puc
 {
     public class Presidente:Candidato
     {
-        public Presidente(int id, string nome,Partido partido) :base(id,nome,partido)
+        public Presidente(int id, string nome,string partido) :base(id,nome,partido)
         {
            
         }

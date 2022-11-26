@@ -8,7 +8,7 @@ namespace trabalho_poo_puc
 {
     public class DeputadoFederal:Candidato
     {
-        public DeputadoFederal(int id, string nome,Partido partido) :base(id,nome,partido)
+        public DeputadoFederal(int id, string nome,string partido) :base(id,nome,partido)
         {
            
         }
