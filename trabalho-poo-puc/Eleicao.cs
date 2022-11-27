@@ -11,20 +11,20 @@ namespace trabalho_poo_puc
             this.tipo = tipo;
             this.ano = ano;
         }
-
         public int tipo {get; set; } //1 EXECUTIVO, 2 Legislativo
         public int ano {get; set; }
-        public List<Candidato> candidatos;
-        public List<Partido> partidos;
+        public List<Candidato> candidatos = new List<Candidato>();
+        public List<Partido> partidos = new List<Partido>();
         public Branco branco = new Branco(1,"Branco","Branco");
         public Nulo nulo = new Nulo(0,"Nulo","Nulo");
         public void cadastro(){
             Console.WriteLine("Cadastre os Partidos da Eleicao (FIM para sair)");
             string input = "";
             while (input != "FIM"){
-                
+                Console.WriteLine("Numero do Partido");
                 int id =  int.Parse(Console.ReadLine());
 
+                Console.WriteLine("Nome do Partido");
                 string nome = Console.ReadLine();
 
                 Partido partido = new Partido(id,nome);
@@ -117,7 +117,6 @@ namespace trabalho_poo_puc
                         break;
                 }
                 
-
                 Console.WriteLine("Deseja Continuar?");
                 input = Console.ReadLine();
             }

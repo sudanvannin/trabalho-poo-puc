@@ -8,8 +8,7 @@ namespace trabalho_poo_puc
 {
     public class Nulo:Candidato
     {
-        public Nulo(int id, string nome,string partido) :base(id,nome,partido)
-        {
+        public Nulo(int id, string nome,string partido) :base(id,nome,partido){
            
         }
 

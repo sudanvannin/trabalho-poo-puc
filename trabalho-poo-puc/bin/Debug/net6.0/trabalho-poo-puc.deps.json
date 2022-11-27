@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "trabalho-poo-puc/1.0.0": {
+        "runtime": {
+          "trabalho-poo-puc.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "trabalho-poo-puc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
