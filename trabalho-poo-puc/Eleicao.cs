@@ -37,88 +37,107 @@ namespace trabalho_poo_puc
             Console.WriteLine("Cadastre os Candidatos da Eleicao (FIM para sair)");
             input = "";
             while (input != "FIM"){
-                
-                Console.WriteLine("Selecione o tipo de Candidato a cadastrar");
-                Console.WriteLine("1-Presidente \r\n 2-Governador \r\n 3-Deputado Federal \r\n 4-Deputado Estadual \r\n 5-Prefeito \r\n 6-Vereador");
-                int selection = int.Parse(Console.ReadLine());
+                if (this.tipo ==1){
+                    Console.WriteLine("Selecione o tipo de Candidato a cadastrar");
+                    Console.WriteLine("1-Presidente \r\n 2-Governador \r\n 5-Prefeito");
+                    
+                    int selection = int.Parse(Console.ReadLine());
 
-                int id;
-                string nome, partido;
-                switch (selection)
-                {
-                    case 1:
+                    int id;
+                    string nome, partido;
+                    switch (selection){
+                        case 1:
 
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
 
-                        Presidente cand0 = new Presidente(id,nome,partido);
-                        candidatos.Add(cand0);
-                        break;
-                    case 2:
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                            Presidente cand0 = new Presidente(id,nome,partido);
+                            candidatos.Add(cand0);
+                            break;
+                        case 2:
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
 
-                        Governador cand1 = new Governador(id,nome,partido);
-                        candidatos.Add(cand1);
-                        break;
-                    case 3:
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                            Governador cand1 = new Governador(id,nome,partido);
+                            candidatos.Add(cand1);
+                            break;
+                        case 5:
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
 
-                        DeputadoFederal cand2 = new DeputadoFederal(id,nome,partido);
-                        candidatos.Add(cand2);
-                        break;
-                    case 4:
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                            Prefeito cand4 = new Prefeito(id,nome,partido);
+                            candidatos.Add(cand4);
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    Console.WriteLine("Deseja Continuar?");
+                    input = Console.ReadLine();
+                    
+                }    else{
+                    Console.WriteLine("Selecione o tipo de Candidato a cadastrar");
+                    Console.WriteLine(" \r\n 3-Deputado Federal \r\n 4-Deputado Estadual \r\n 6-Vereador");
+                    
+                    int selection = int.Parse(Console.ReadLine());
 
-                        DeputadoEstadual cand3 = new DeputadoEstadual(id,nome,partido);
-                        candidatos.Add(cand3);
-                        break;
-                    case 5:
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                    int id;
+                    string nome, partido;
+                    switch (selection){
+                       
+                        case 3:
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
 
-                        Prefeito cand4 = new Prefeito(id,nome,partido);
-                        candidatos.Add(cand4);
-                        break;
-                    case 6:
-                        Console.WriteLine("insira o número do candidato");
-                        id =  int.Parse(Console.ReadLine());
-                        Console.WriteLine("insira o nome do candidato");
-                        nome = Console.ReadLine();
-                        Console.WriteLine("insira o partido do candidato");
-                        partido = Console.ReadLine();
+                            DeputadoFederal cand2 = new DeputadoFederal(id,nome,partido);
+                            candidatos.Add(cand2);
+                            break;
+                        case 4:
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
 
-                        Vereador cand5 = new Vereador(id,nome,partido);
-                        candidatos.Add(cand5);
-                        break;
-                    default:
-                        break;
+                            DeputadoEstadual cand3 = new DeputadoEstadual(id,nome,partido);
+                            candidatos.Add(cand3);
+                            break;
+                        case 6:
+                            Console.WriteLine("insira o número do candidato");
+                            id =  int.Parse(Console.ReadLine());
+                            Console.WriteLine("insira o nome do candidato");
+                            nome = Console.ReadLine();
+                            Console.WriteLine("insira o partido do candidato");
+                            partido = Console.ReadLine();
+
+                            Vereador cand5 = new Vereador(id,nome,partido);
+                            candidatos.Add(cand5);
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    Console.WriteLine("Deseja Continuar?");
+                    input = Console.ReadLine();
                 }
-                
-                Console.WriteLine("Deseja Continuar?");
-                input = Console.ReadLine();
+               
             }
         }
     }

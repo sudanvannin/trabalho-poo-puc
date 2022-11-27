@@ -8,18 +8,21 @@ namespace trabalho_poo_puc
 {
     public class Candidato
     {
-        public Candidato(int id, string nome,string partido)
-        {
+        public Candidato(int id, string nome,string partido){
+
             Id = id;
             Nome = nome;
-            partido = partido;
+            this.partido = partido;
         }
 
+        public string cargo { get; set; }
         public int Id { get; set; }
         public string Nome { get; set; }
         public int QtdVotos { get; set; }
         public string partido { get; set; }
+        public int tipo { get; set; }
         public void addVoto(){
+
             this.QtdVotos++;
         }
 

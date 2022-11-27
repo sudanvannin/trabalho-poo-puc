@@ -8,12 +8,13 @@ namespace trabalho_poo_puc{
 
         public static void Main()
         {
-            Eleicao teste = new Eleicao(1,2022);
+            /* Eleicao teste = new Eleicao(1,2022);
             Urna urna = new Urna(1,2346,teste);
             Eleicao eleicao = urna.getEleicao();
             eleicao.cadastro();
 
-            urna.votacao(); //
+            urna.votacao();  */
+            Arquivo.leArquivo();
         }
 
         
