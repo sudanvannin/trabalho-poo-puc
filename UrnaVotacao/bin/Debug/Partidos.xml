@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfPartido xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Partido>
+    <NumCadeira>1500</NumCadeira>
+    <NomePartido>PT</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>1600</NumCadeira>
+    <NomePartido>PSDB</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>1230</NumCadeira>
+    <NomePartido>PSL</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>2</NumCadeira>
+    <NomePartido>PL</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>2</NumCadeira>
+    <NomePartido>jorge</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>5</NumCadeira>
+    <NomePartido>POO</NomePartido>
+  </Partido>
+</ArrayOfPartido>

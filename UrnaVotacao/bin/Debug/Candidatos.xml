@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<ArrayOfCandidato xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Candidato>
+    <Partido>PT</Partido>
+    <Nome>Lula</Nome>
+    <Idade>65</Idade>
+    <NumCandidato>13</NumCandidato>
+  </Candidato>
+  <Candidato>
+    <Partido>PL</Partido>
+    <Nome>teste</Nome>
+    <Idade>32</Idade>
+    <NumCandidato>22</NumCandidato>
+  </Candidato>
+  <Candidato>
+    <Partido>PL</Partido>
+    <Nome>JAIR BOLSONARO</Nome>
+    <Idade>55</Idade>
+    <NumCandidato>17</NumCandidato>
+  </Candidato>
+  <Candidato>
+    <Partido>POO</Partido>
+    <Nome>Nulo</Nome>
+    <Idade>0</Idade>
+    <NumCandidato>0</NumCandidato>
+  </Candidato>
+</ArrayOfCandidato>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ArrayOfVotos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Votos>
+    <NomeCand>Lula</NomeCand>
+    <QtdVotos>2</QtdVotos>
+    <IdCand>13</IdCand>
+  </Votos>
+  <Votos>
+    <NomeCand>teste</NomeCand>
+    <QtdVotos>1</QtdVotos>
+    <IdCand>22</IdCand>
+  </Votos>
+  <Votos>
+    <NomeCand>JAIR BOLSONARO</NomeCand>
+    <QtdVotos>0</QtdVotos>
+    <IdCand>17</IdCand>
+  </Votos>
+  <Votos>
+    <NomeCand>Nulo</NomeCand>
+    <QtdVotos>0</QtdVotos>
+    <IdCand>0</IdCand>
+  </Votos>
+  <Votos>
+    <NomeCand>Lula</NomeCand>
+    <QtdVotos>1</QtdVotos>
+    <IdCand>13</IdCand>
+  </Votos>
+</ArrayOfVotos>
