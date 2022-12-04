@@ -15,6 +15,8 @@ namespace UrnaVotacao.Menu
         public Login()
         {
             InitializeComponent();
+            this.btnUser.Text = "Urna";
+            this.btnAdm.Text = "Admin";
         }
 
         private void BtnUser_Click(object sender, EventArgs e)

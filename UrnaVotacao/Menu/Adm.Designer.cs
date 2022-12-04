@@ -40,7 +40,7 @@
             this.btnLeg.Name = "btnLeg";
             this.btnLeg.Size = new System.Drawing.Size(75, 41);
             this.btnLeg.TabIndex = 0;
-            this.btnLeg.Text = "Create Legistativo";
+            this.btnLeg.Text = "Cadastro Executivo";
             this.btnLeg.UseVisualStyleBackColor = true;
             this.btnLeg.Click += new System.EventHandler(this.BtnLeg_Click);
             // 
@@ -50,7 +50,7 @@
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(75, 23);
             this.btnRead.TabIndex = 1;
-            this.btnRead.Text = "Read";
+            this.btnRead.Text = "Exibir";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
@@ -60,8 +60,9 @@
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 2;
-            this.btnFinish.Text = "Finish";
+            this.btnFinish.Text = "Exportar";
             this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // btnExe
             // 
@@ -69,7 +70,7 @@
             this.btnExe.Name = "btnExe";
             this.btnExe.Size = new System.Drawing.Size(75, 41);
             this.btnExe.TabIndex = 3;
-            this.btnExe.Text = "Create Executivo";
+            this.btnExe.Text = "Cadastro Legislativo";
             this.btnExe.UseVisualStyleBackColor = true;
             this.btnExe.Click += new System.EventHandler(this.BtnExe_Click);
             // 

@@ -5,15 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using UrnaVotacao.Votacao.Classes.Abstracoes;
 
 namespace UrnaVotacao.Votacao.Classes.Partido
 {
-    class MetodosPartido
+    class PartidoServices:IServices<Partido>
     {
 
         private List<Partido> _partido;
 
-        public MetodosPartido()
+        public PartidoServices()
         {
             this._partido = new List<Partido>();
         }
@@ -35,7 +36,7 @@ namespace UrnaVotacao.Votacao.Classes.Partido
             this._partido.Remove(cliente);
         }
 
-        public List<Partido> MostrarClientes()
+        public List<Partido> Mostrar()
         {
             return this._partido;
         }

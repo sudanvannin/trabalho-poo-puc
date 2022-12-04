@@ -24,4 +24,16 @@
     <NumCadeira>5</NumCadeira>
     <NomePartido>POO</NomePartido>
   </Partido>
+  <Partido>
+    <NumCadeira>1234</NumCadeira>
+    <NomePartido>teste2</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>5550</NumCadeira>
+    <NomePartido>teste4</NomePartido>
+  </Partido>
+  <Partido>
+    <NumCadeira>500</NumCadeira>
+    <NomePartido>pcdob</NomePartido>
+  </Partido>
 </ArrayOfPartido>

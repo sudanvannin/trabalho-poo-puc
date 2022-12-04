@@ -8,15 +8,16 @@ using System.Xml.Serialization;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 using UrnaVotacao.Votacao.Classes.Candidato;
 using UrnaVotacao.Votacao.Classes.Partido;
+using UrnaVotacao.Votacao.Classes.Abstracoes;
 
 
 namespace UrnaVotacao.Votacao.Classes.Candidato
 {
-    class Metodos
+    class CandidatoServices:IServices<Candidato>
     {
         private List<Candidato> _candidato;
 
-        public Metodos()
+        public CandidatoServices()
         {
             this._candidato = new List<Candidato>();
         }
@@ -39,7 +40,7 @@ namespace UrnaVotacao.Votacao.Classes.Candidato
             this._candidato.Remove(candidato);
         }
 
-        public List<Candidato> MostrarCandidatos()
+        public List<Candidato> Mostrar()
         {
             return this._candidato;
         }
@@ -53,7 +54,7 @@ namespace UrnaVotacao.Votacao.Classes.Candidato
             ser.Serialize(fs, this._candidato);
             fs.Close();
 
-            MetodosVotos newVoto = new MetodosVotos();
+            VotoServices newVoto = new VotoServices();
             foreach (Candidato candi in this._candidato) {
 
                 Votos voto = new Votos(candi.Nome, 0, candi.NumCandidato);

@@ -73,20 +73,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Votacao\Classes\Candidato\AbsCandidato.cs" />
+    <Compile Include="Votacao\Classes\Abstracoes\AbsCandidato.cs" />
+    <Compile Include="Votacao\Classes\Abstracoes\IServices.cs" />
     <Compile Include="Votacao\Classes\Candidato\Candidato.cs" />
-    <Compile Include="Votacao\Classes\Candidato\ICandidato.cs" />
+    <Compile Include="Votacao\Classes\Abstracoes\ICandidato.cs" />
     <Compile Include="Votacao\Classes\Candidato\Deputado.cs" />
     <Compile Include="Votacao\Classes\Candidato\Governador.cs" />
     <Compile Include="Votacao\Classes\Candidato\Nulo.cs" />
-    <Compile Include="Votacao\Classes\Services\Metodos.cs" />
-    <Compile Include="Votacao\Classes\Services\MetodosVotos.cs" />
+    <Compile Include="Votacao\Classes\Services\CandidatoServices.cs" />
+    <Compile Include="Votacao\Classes\Services\VotoServices.cs" />
     <Compile Include="Votacao\Classes\Candidato\Prefeito.cs" />
     <Compile Include="Votacao\Classes\Candidato\Presidente.cs" />
     <Compile Include="Votacao\Classes\Candidato\Senador.cs" />
     <Compile Include="Votacao\Classes\Candidato\Vereador.cs" />
     <Compile Include="Votacao\Classes\Candidato\Votos.cs" />
-    <Compile Include="Votacao\Classes\Partido\MetodosPartido.cs" />
+    <Compile Include="Votacao\Classes\Services\PartidoServices.cs" />
     <Compile Include="Votacao\Classes\Partido\Partido.cs" />
     <Compile Include="Votacao\VotacaoExe.cs">
       <SubType>Form</SubType>

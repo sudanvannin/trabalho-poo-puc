@@ -24,4 +24,22 @@
     <Idade>0</Idade>
     <NumCandidato>0</NumCandidato>
   </Candidato>
+  <Candidato>
+    <Partido>teste2</Partido>
+    <Nome>pedro barros</Nome>
+    <Idade>22</Idade>
+    <NumCandidato>33</NumCandidato>
+  </Candidato>
+  <Candidato>
+    <Partido>teste4</Partido>
+    <Nome>jeniffer</Nome>
+    <Idade>23</Idade>
+    <NumCandidato>16</NumCandidato>
+  </Candidato>
+  <Candidato>
+    <Partido>pcdob</Partido>
+    <Nome>leo pericles</Nome>
+    <Idade>22</Idade>
+    <NumCandidato>46</NumCandidato>
+  </Candidato>
 </ArrayOfCandidato>

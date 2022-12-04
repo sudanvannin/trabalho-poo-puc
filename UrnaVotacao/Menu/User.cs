@@ -105,14 +105,14 @@ namespace UrnaVotacao.Menu
             Console.WriteLine("voto digitado: " + this.txbNumero);
 
 
-            Metodos candServices = new Metodos();
+            CandidatoServices candServices = new CandidatoServices();
             candServices.Carregar();
-            List<Candidato> cands = candServices.MostrarCandidatos();
+            List<Candidato> cands = candServices.Mostrar();
 
 
-            MetodosVotos metodosVotos = new MetodosVotos();
-            metodosVotos.Carregar();
-            List<Votos> votos = metodosVotos.MostrarVotos();
+            VotoServices VotoServices = new VotoServices();
+            VotoServices.Carregar();
+            List<Votos> votos = VotoServices.Mostrar();
 
             int voto;
             try{
@@ -123,8 +123,8 @@ namespace UrnaVotacao.Menu
 
                 Votos votoCerto = votos.Find(i => i.NomeCand == candidatoCerto.Nome);
                 votoCerto.QtdVotos++;
-                //metodosVotos.Adicionar(votoCerto);
-                metodosVotos.Salvar();
+                
+                VotoServices.Salvar();
             }
             catch (NullReferenceException ) {
 
@@ -133,8 +133,8 @@ namespace UrnaVotacao.Menu
 
                 Votos votoCerto = votos.Find(i => i.NomeCand == candidatoNulo.Nome);
                 votoCerto.QtdVotos++;
-                //metodosVotos.Adicionar();
-                metodosVotos.Salvar();
+                
+                VotoServices.Salvar();
             }
             catch (FormatException){
 
@@ -142,15 +142,15 @@ namespace UrnaVotacao.Menu
                 Candidato candidatoNulo = cands.Find(i => i.NumCandidato == 0);
 
                 Votos votoCerto = votos.Find(i => i.NomeCand == candidatoNulo.Nome);
-                //TRATAR QUANDO NÃO ACHA O CANDIDATO NOS VOTOS
                 votoCerto.QtdVotos++;
-                //metodosVotos.Adicionar(votoCerto);
-                metodosVotos.Salvar();
+                VotoServices.Salvar();
             }
 
-            this.txbNumero.Clear();
+            txbNumero.Text = null;
+            numero = null;
 
 
         }
+       
     }
 }

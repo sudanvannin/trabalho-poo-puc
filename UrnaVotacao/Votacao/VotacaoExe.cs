@@ -14,9 +14,9 @@ namespace UrnaVotacao.Votacao
 {
     public partial class VotacaoExe : Form
     {
-        MetodosPartido metodosPartido = new MetodosPartido();
-        Metodos metodosCandidato = new Metodos();
-        MetodosVotos metodosVotos = new MetodosVotos();
+        PartidoServices PartidoServices = new PartidoServices();
+        CandidatoServices candiServices = new CandidatoServices();
+        VotoServices VotoServices = new VotoServices();
 
         public VotacaoExe()
         {
@@ -45,9 +45,9 @@ namespace UrnaVotacao.Votacao
 
         private void BtnSaveCandidato_Click(object sender, EventArgs e)
         {
-            Candidato criaCandidato = new Candidato(cmbPartido.Text,txtNomeCand.Text,Convert.ToInt32(txtIdade.Text),Convert.ToInt32(txtNumCandidato.Text));
-            metodosCandidato.Adicionar(criaCandidato);
-            metodosCandidato.Salvar();
+            Candidato criaCandidato = new Candidato(cmbPartido.Text, txtNomeCand.Text, Convert.ToInt32(txtIdade.Text), Convert.ToInt32(txtNumCandidato.Text));
+            candiServices.Adicionar(criaCandidato);
+            candiServices.Salvar();
             txtIdade.Text = null;
             txtNomeCand.Text = null;
             txtNumCandidato.Text = null;
@@ -58,15 +58,15 @@ namespace UrnaVotacao.Votacao
         private void VotacaoExe_Load(object sender, EventArgs e)
         {
             // Carrega Partido
-            metodosPartido.Carregar();
+            PartidoServices.Carregar();
             DataSet partidos = new DataSet();
             partidos.ReadXml("Partidos.xml");
-            cmbPartido.DataSource = partidos.Tables["Partido"];          
+            cmbPartido.DataSource = partidos.Tables["Partido"];
             cmbPartido.DisplayMember = "NomePartido";
             cmbPartido.SelectedIndex = -1;
 
             //Carrega Candidato
-            metodosCandidato.Carregar();
+            candiServices.Carregar();
             DataSet candidatos = new DataSet();
             candidatos.ReadXml("Candidatos.xml");
             cmbCandidato.DataSource = candidatos.Tables["Candidato"];
@@ -77,19 +77,26 @@ namespace UrnaVotacao.Votacao
         private void BtnSavePart_Click(object sender, EventArgs e)
         {
             Partido criaPartido = new Partido(Convert.ToInt32(txtQtdCadeiraExe.Text), txtPartidoExe.Text);
-            metodosPartido.Adicionar(criaPartido);
-            metodosPartido.Salvar();
+            PartidoServices.Adicionar(criaPartido);
+            PartidoServices.Salvar();
             txtNomeCand.Text = null;
             txtQtdCadeiraExe.Text = null;
         }
 
-        private void btnSaveVoto_Click(object sender, EventArgs e)
-        {
-            string[] cand = cmbCandidato.Text.Split('-');
+        private void btnSaveVoto_Click(object sender, EventArgs e){
 
-            Votos criaVoto = new Votos(cand[0], Convert.ToInt32(txtQtdVotos.Text), Convert.ToInt32(cand[1]));
-            metodosVotos.Adicionar(criaVoto);
-            metodosVotos.Salvar();
+            CandidatoServices candServices = new CandidatoServices();
+            candServices.Carregar();
+            List<Candidato> cands = candServices.Mostrar();
+
+            VotoServices VotoServices = new VotoServices();
+            VotoServices.Carregar();
+            List<Votos> votos = VotoServices.Mostrar();
+
+            Votos votoCerto = votos.Find(i => i.NomeCand == cmbCandidato.Text);
+            votoCerto.QtdVotos+= Convert.ToInt32(txtQtdVotos.Text);
+
+            VotoServices.Salvar();
             cmbCandidato.Text = null;
             txtQtdVotos.Text = null;
         }

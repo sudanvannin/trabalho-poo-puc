@@ -8,7 +8,6 @@ using UrnaVotacao.Votacao.Classes.Partido;
 namespace UrnaVotacao.Votacao.Classes.Candidato
 {
     public interface ICandidato { 
-
         void funcaoCandidato();
     }
 }

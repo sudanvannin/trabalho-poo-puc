@@ -91,7 +91,7 @@
             this.btnClearVoto.Name = "btnClearVoto";
             this.btnClearVoto.Size = new System.Drawing.Size(75, 23);
             this.btnClearVoto.TabIndex = 18;
-            this.btnClearVoto.Text = "Clear";
+            this.btnClearVoto.Text = "Limpa";
             this.btnClearVoto.UseVisualStyleBackColor = true;
             this.btnClearVoto.Click += new System.EventHandler(this.BtnClearVoto_Click);
             // 
@@ -101,7 +101,7 @@
             this.btnSaveVoto.Name = "btnSaveVoto";
             this.btnSaveVoto.Size = new System.Drawing.Size(75, 23);
             this.btnSaveVoto.TabIndex = 17;
-            this.btnSaveVoto.Text = "Save";
+            this.btnSaveVoto.Text = "Salvar";
             this.btnSaveVoto.UseVisualStyleBackColor = true;
             this.btnSaveVoto.Click += new System.EventHandler(this.btnSaveVoto_Click);
             // 
@@ -252,7 +252,7 @@
             this.btnClearCand.Name = "btnClearCand";
             this.btnClearCand.Size = new System.Drawing.Size(75, 23);
             this.btnClearCand.TabIndex = 6;
-            this.btnClearCand.Text = "Clear";
+            this.btnClearCand.Text = "Limpa";
             this.btnClearCand.UseVisualStyleBackColor = true;
             this.btnClearCand.Click += new System.EventHandler(this.BtnClearCand_Click);
             // 
@@ -262,7 +262,7 @@
             this.btnSaveCandidato.Name = "btnSaveCandidato";
             this.btnSaveCandidato.Size = new System.Drawing.Size(75, 23);
             this.btnSaveCandidato.TabIndex = 5;
-            this.btnSaveCandidato.Text = "Save";
+            this.btnSaveCandidato.Text = "Salvar";
             this.btnSaveCandidato.UseVisualStyleBackColor = true;
             this.btnSaveCandidato.Click += new System.EventHandler(this.BtnSaveCandidato_Click);
             // 
@@ -288,7 +288,7 @@
             this.btnClearPart.Name = "btnClearPart";
             this.btnClearPart.Size = new System.Drawing.Size(75, 23);
             this.btnClearPart.TabIndex = 4;
-            this.btnClearPart.Text = "Clear";
+            this.btnClearPart.Text = "Limpa";
             this.btnClearPart.UseVisualStyleBackColor = true;
             this.btnClearPart.Click += new System.EventHandler(this.BtnClearPart_Click);
             // 
@@ -298,7 +298,7 @@
             this.btnSavePart.Name = "btnSavePart";
             this.btnSavePart.Size = new System.Drawing.Size(75, 23);
             this.btnSavePart.TabIndex = 2;
-            this.btnSavePart.Text = "Save";
+            this.btnSavePart.Text = "Salvar";
             this.btnSavePart.UseVisualStyleBackColor = true;
             this.btnSavePart.Click += new System.EventHandler(this.BtnSavePart_Click);
             // 
